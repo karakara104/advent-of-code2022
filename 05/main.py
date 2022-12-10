@@ -20,9 +20,10 @@ def move_n_boxes(n_boxes: int, src: list[str], dst: list[str]) -> int:
     Moves n_moves boxed from src to dst, all at a time
     Returns number of moved boxes
     """
+    n_moved = len(src[-n_boxes:])
     dst.extend(src[-n_boxes:])
     del src[-n_boxes:]
-    return 0
+    return n_moved
 
 
 piles = []
